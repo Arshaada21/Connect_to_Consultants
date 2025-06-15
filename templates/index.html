@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connect to Consultants</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Connect to Consultants</h1>
+    <p>Your mental wellness journey starts here</p>
+  </header>
+
+  <main>
+    <section id="doctor-list">
+      <h2>Our Specialists</h2>
+      <div class="doctor-container">
+        <div class="doctor-card">
+          <div class="doctor-image" style="background-image: url('/static/images/doctor1.jpg');"></div>
+          <div class="doctor-details">
+            <p>Dr. Rakesh Mehta<br><span>Psychiatrist</span></p>
+          </div>
+        </div>
+        <div class="doctor-card">
+          <div class="doctor-image" style="background-image: url('/static/images/doctor2.jpg');"></div>
+          <div class="doctor-details">
+            <p>Dr. Sneha Roy<br><span>Neurologist</span></p>
+          </div>
+        </div>
+        <div class="doctor-card">
+          <div class="doctor-image" style="background-image: url('/static/images/doctor3.jpg');"></div>
+          <div class="doctor-details">
+            <p>Dr. Parthasarathy Biswas<br><span>Psychiatrist</span></p>
+          </div>
+        </div>
+        <div class="doctor-card">
+          <div class="doctor-image" style="background-image: url('/static/images/doctor4.jpg');"></div>
+          <div class="doctor-details">
+            <p>Dr. Patel<br><span>Dermatologist</span></p>
+          </div>
+        </div>
+        <div class="doctor-card">
+          <div class="doctor-image" style="background-image: url('/static/images/doctor5.jpg');"></div>
+          <div class="doctor-details">
+            <p>Dr. Amit Singh<br><span>Clinical Psychologist</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="appointment-booking">
+      <h2>Book Your Appointment</h2>
+      <form id="appointment-form">
+        <input type="text" id="client-name" placeholder="Your Name" required>
+        <select id="doctor-select" required>
+          <option value="1">Dr. Rakesh Mehta</option>
+          <option value="2">Dr. Sneha Roy</option>
+          <option value="3">Dr. Parthasarathy Biswas</option>
+          <option value="4">Dr. Patel</option>
+          <option value="5">Dr. Amit Singh</option>
+        </select>
+        <input type="date" id="appointment-date" required>
+        <input type="time" id="appointment-time" required>
+        <button type="submit">Book Appointment</button>
+      </form>
+      <div id="confirmation" class="success-message"></div>
+    </section>
+
+    <section id="report-upload">
+      <h2>Upload  Report</h2>
+      <form id="report-form" enctype="multipart/form-data">
+        <input type="text" name="client_name" placeholder="Client Name" required>
+        <select name="doctor" required>
+          <option value="1">Dr. Rakesh Mehta</option>
+          <option value="2">Dr. Sneha Roy</option>
+          <option value="3">Dr. Parthasarathy Biswas</option>
+          <option value="4">Dr. Patel</option>
+          <option value="5">Dr. Amit Singh</option>
+        </select>
+        <input type="file" name="report" accept=".pdf,.doc,.docx" required>
+        <button type="submit">Upload Report</button>
+      </form>
+      <div id="report-status"></div>
+    </section>
+
+    <section id="report-download">
+      <h2>Download Approved Report</h2>
+      <form id="download-form">
+        <input type="text" id="download-client-name" placeholder="Client Name" required>
+        <button type="submit">Download</button>
+      </form>
+      <div id="download-status"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Connect to Consultants. All rights reserved.</p>
+  </footer>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
+
